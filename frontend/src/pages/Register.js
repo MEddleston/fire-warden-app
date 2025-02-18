@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -20,6 +22,7 @@ const Register = () => {
     };
 
     return (
+        <body>
         <div>
             <h1>Register Fire Warden</h1>
             <form onSubmit={handleSubmit}>
@@ -29,7 +32,14 @@ const Register = () => {
                 <input type="text" name="location" placeholder="Location" onChange={handleChange} required />
                 <button type="submit">Register</button>
             </form>
+           
         </div>
+        <div>
+        <Link to="/">
+            <button>Back to Dashboard</button>
+        </Link>
+        </div>
+        </body>
     );
 };
 

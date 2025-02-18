@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
     const [wardens, setWardens] = useState([]);
@@ -33,7 +34,12 @@ const Dashboard = () => {
                     ))}
                 </tbody>
             </table>
+            <h1>Fire Warden Dashboard</h1>
+            <Link to="/register">
+                <button>Add New Fire Warden</button>
+            </Link>
         </div>
+        
     );
 };
 
