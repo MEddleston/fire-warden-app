@@ -2,14 +2,14 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 
 const ProtectedRoute = ({ role, children }) => {
-  const user = JSON.parse(localStorage.getItem("user")); // Get user from local storage
+  const user = JSON.parse(localStorage.getItem("user"));
 
   if (!user) {
-    return <Navigate to="/" replace />; // Redirect to login if not logged in
+    return <Navigate to="/" replace />;
   }
 
   if (user.role !== role) {
-    return <Navigate to="/" replace />; // Redirect if role doesn't match
+    return <Navigate to="/" replace />;
   }
 
   return children;
