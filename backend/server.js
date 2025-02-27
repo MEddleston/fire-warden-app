@@ -10,7 +10,6 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// Load API routes
 app.use("/api", authRoutes);
 app.use("/api", fireWardenRoutes);
 
